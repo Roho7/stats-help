@@ -41,7 +41,7 @@ export default function Subjects() {
     router.push(`/stats/${paramId - 1}`);
   };
   return (
-    <Card className=" w-1/3">
+    <Card className=" md:w-1/3">
       <CardHeader>
         <CardTitle>
           Are you comparing within subjects or between subjects?
@@ -51,7 +51,7 @@ export default function Subjects() {
           people?
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex justify-between">
+      <CardContent className="flex max-md:flex-col justify-between">
         <HoverCard>
           <HoverCardTrigger asChild>
             <Button

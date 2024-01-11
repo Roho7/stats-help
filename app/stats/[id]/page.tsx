@@ -21,7 +21,7 @@ export interface TestDataType {
 export default function Page({ params }: { params: { id: string } }) {
   return (
     <RecoilRoot>
-      <div className="w-screen h-screen flex flex-col gap-8 justify-center items-center">
+      <div className="w-screen h-screen p-2 flex flex-col gap-8 justify-center items-center">
         {/* <Selections /> */}
         {params.id === "1" && <NatureOfData />}
         {params.id === "2" && <Parametric />}

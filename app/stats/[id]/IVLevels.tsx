@@ -42,7 +42,7 @@ export default function IVLevels() {
   };
 
   return (
-    <Card className=" w-1/3">
+    <Card className=" md:w-1/3">
       <CardHeader>
         <CardTitle>
           How many levels of Independant Variables do you have?
@@ -51,7 +51,7 @@ export default function IVLevels() {
           The number of times you have taken observations for comparison.
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex justify-between">
+      <CardContent className="flex max-md:flex-col justify-between">
         <HoverCard>
           <HoverCardTrigger asChild>
             <Button

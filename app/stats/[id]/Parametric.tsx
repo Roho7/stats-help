@@ -42,14 +42,14 @@ export default function Parametric() {
   };
 
   return (
-    <Card className=" w-1/3">
+    <Card className="md:w-1/3">
       <CardHeader>
         <CardTitle>Is your data Parametric or Non-Parametric?</CardTitle>
         <CardDescription>
           Think about the distribution of your data.
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex justify-between">
+      <CardContent className="flex max-md:flex-col justify-between">
         <HoverCard>
           <HoverCardTrigger asChild>
             <Button

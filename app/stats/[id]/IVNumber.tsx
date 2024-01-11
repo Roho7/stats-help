@@ -42,14 +42,14 @@ export default function IVNumber() {
   };
 
   return (
-    <Card className=" w-1/3">
+    <Card className=" md:w-1/3">
       <CardHeader>
         <CardTitle>How many Independant Variables do you have?</CardTitle>
         <CardDescription>
           The number of factors you are measuring in your experiment.
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex justify-between">
+      <CardContent className="flex max-md:flex-col justify-between">
         <HoverCard>
           <HoverCardTrigger asChild>
             <Button

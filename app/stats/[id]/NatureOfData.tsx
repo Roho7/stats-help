@@ -42,12 +42,12 @@ export default function NatureOfData() {
   };
 
   return (
-    <Card className=" w-1/3">
+    <Card className="md:w-1/3">
       <CardHeader>
         <CardTitle>What type of data do you have?</CardTitle>
         <CardDescription>Think about the nature of your data.</CardDescription>
       </CardHeader>
-      <CardContent className="flex justify-between">
+      <CardContent className="flex max-md:flex-col justify-between">
         <HoverCard>
           <HoverCardTrigger asChild>
             <Button
