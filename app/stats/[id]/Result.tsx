@@ -27,7 +27,7 @@ export default function Result() {
         return "Chi-Square Test";
       }
     }
-    return null; // No match found
+    return "Nothing found"; // No match found
   };
 
   useEffect(() => {
