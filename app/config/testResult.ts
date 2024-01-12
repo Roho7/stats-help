@@ -24,6 +24,7 @@ export const TestResults: TestDataType[] = [
     iv_number: 1,
     iv_levels: 2,
     subjects_rel: "between_subjects",
+    link: "/ttestbetween",
   },
   {
     name: "T-Test Within",
@@ -32,6 +33,7 @@ export const TestResults: TestDataType[] = [
     iv_number: 1,
     iv_levels: 2,
     subjects_rel: "within_subjects",
+    link: "/ttestwithin",
   },
 
   {
