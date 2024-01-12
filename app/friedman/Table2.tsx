@@ -63,23 +63,33 @@ export default function Table2() {
   };
 
   return (
-    <div className="flex w-full gap-2 ">
+    <div className="flex max-md:flex-col w-full gap-2 ">
       <div className="w-full">
         <h1>Step 2</h1>
-        <ul>
-          <li>Rank the data</li>
-          <Button onClick={rankTable}>Rank</Button>
-          <li>Calculate Rank Totals</li>
-          <Button onClick={handleSumTable}>Calculate Rank Totals</Button>
-          <li>Sum of Ranks</li>
-          <Button onClick={handleSumRanks}>Calculate</Button>
+        <ol className=" list-decimal p-4 space-y-2">
+          <li>
+            <Button onClick={rankTable}>Rank the data</Button>
+            <p>Rank the entries for each subject</p>
+          </li>
+
+          <li>
+            <Button onClick={handleSumTable}>Calculate Rank Totals</Button>
+            <p>Calculate the sum of each condition ranks</p>
+          </li>
+
+          <li>
+            <Button onClick={handleSumRanks}>Calculate Sum</Button>
+            <p>Sum of ranks</p>
+          </li>
+
           {sumOfRanks != 0 && (
             <li>
-              Total: <span> {sumArray[0]}</span> + <span> {sumArray[1]}</span> +{" "}
-              <span> {sumArray[2]}</span> = {sumOfRanks}
+              <strong>Total:</strong> <span> {sumArray[0]}</span> +{" "}
+              <span> {sumArray[1]}</span> + <span> {sumArray[2]}</span> ={" "}
+              {sumOfRanks}
             </li>
           )}
-        </ul>
+        </ol>
       </div>
       <table>
         <thead>

@@ -9,7 +9,7 @@ export const ttestwithindata = [
 
 export default function Table1() {
   return (
-    <div className="flex w-full">
+    <div className="flex w-full max-md:flex-col ">
       <div className="w-full">
         <h1>Step 1</h1>
         <ul>

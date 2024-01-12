@@ -9,7 +9,7 @@ export const friedmandata = [
 
 export default function Table1() {
   return (
-    <div className="flex w-full">
+    <div className="flex max-md:flex-col w-full">
       <div className="w-full">
         <h1>Step 1</h1>
         <ul>

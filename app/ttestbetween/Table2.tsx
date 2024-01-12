@@ -63,7 +63,7 @@ export default function Table2() {
   };
 
   return (
-    <div className="flex w-full gap-2 ">
+    <div className="flex max-md:flex-col w-full gap-2 ">
       <div className="w-full">
         <h1>Step 2</h1>
         <ul>

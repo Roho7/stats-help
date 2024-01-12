@@ -21,17 +21,25 @@ export default function Table2() {
   };
 
   return (
-    <div className="flex w-full gap-2 ">
+    <div className="flex max-md:flex-col w-full gap-2 ">
       <div className="w-full">
         <h1>Step 2</h1>
-        <ul>
-          <li>Calculate the Differences</li>
-          <Button onClick={handleCalculateDifference}>Calculate</Button>
-          <li>Calculate Squares</li>
-          <Button onClick={handleDifferenceSquare}>Calculate</Button>
-          <li>Calculate sums</li>
-          <Button onClick={() => setSumOfDiff(true)}>Calculate</Button>
-        </ul>
+        <ol className=" space-y-2 list-decimal p-4">
+          <li>
+            <Button onClick={handleCalculateDifference}>
+              Calculate Differences
+            </Button>
+            <p>Condition 1 - Condition 2</p>
+          </li>
+          <li>
+            <Button onClick={handleDifferenceSquare}>Calculate Squares</Button>
+            <p>Difference^2</p>
+          </li>
+          <li>
+            <Button onClick={() => setSumOfDiff(true)}>Calculate Sums</Button>
+            <p>Sum of the differences and difference^2</p>
+          </li>
+        </ol>
       </div>
       <table>
         <thead>

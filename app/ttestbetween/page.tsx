@@ -9,7 +9,7 @@ export default function TableComponent() {
       <div className="flex justify-between border border-border rounded-md p-4">
         <Table1 />
       </div>
-      <div className="flex p-4 justify-between w-full border border-border rounded-md">
+      <div className="p-4 w-full border border-border rounded-md">
         <Table2 />
       </div>
     </div>
