@@ -16,6 +16,8 @@ export const TestResults: TestDataType[] = [
     iv_number: 1,
     iv_levels: 2,
     subjects_rel: "between_subjects",
+    video:
+      "https://www.youtube.com/watch?v=BT1FKd1Qzjw&t=190s&pp=ygUXbWFud2hpdG5leSByYW5rIGJ5IGhhbmQ%3D",
   },
   {
     name: "T-Test Between",
@@ -34,6 +36,7 @@ export const TestResults: TestDataType[] = [
     iv_levels: 2,
     subjects_rel: "within_subjects",
     link: "/ttestwithin",
+    video: "https://www.youtube.com/watch?v=BPbHujvA9UU",
   },
 
   {
@@ -52,6 +55,7 @@ export const TestResults: TestDataType[] = [
     iv_number: 1,
     iv_levels: 3,
     subjects_rel: "between_subjects",
+    video: "https://www.youtube.com/watch?v=q1D4Di1KWLc",
   },
   {
     name: "One Way Anova",
@@ -60,6 +64,7 @@ export const TestResults: TestDataType[] = [
     iv_number: 1,
     iv_levels: 3,
     subjects_rel: "within_subjects",
+    video: "https://www.youtube.com/watch?v=WUjsSB7E-ko",
   },
   {
     name: "One Way Anova",
@@ -68,6 +73,7 @@ export const TestResults: TestDataType[] = [
     iv_number: 1,
     iv_levels: 3,
     subjects_rel: "between_subjects",
+    video: "https://www.youtube.com/watch?v=WUjsSB7E-ko",
   },
   {
     name: "Two Way Anova",
@@ -80,7 +86,7 @@ export const TestResults: TestDataType[] = [
 
   {
     name: "Two Way Anova",
-    nature: "interval",
+    nature: "ordinal",
     param: "parametric",
     iv_number: 2,
     iv_levels: 3,
@@ -117,6 +123,7 @@ export const TestResults: TestDataType[] = [
     iv_number: 1,
     iv_levels: 2,
     subjects_rel: "within_subjects",
+    video: "https://www.youtube.com/watch?v=DE58QuNKA-c",
   },
   {
     name: "Spearman's Rank Correlation Coefficient",
@@ -125,5 +132,6 @@ export const TestResults: TestDataType[] = [
     iv_number: 1,
     iv_levels: 2,
     subjects_rel: "between_subjects",
+    video: "https://www.youtube.com/watch?v=DE58QuNKA-c",
   },
 ];

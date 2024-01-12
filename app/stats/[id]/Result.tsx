@@ -1,4 +1,9 @@
-import { Card, CardFooter, CardHeader } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 import React, { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
 import { TestDataType } from "./page";
@@ -11,6 +16,7 @@ import { TestDataAtom } from "@/app/config/atoms";
 type ResultType = {
   name: string;
   link?: string;
+  video?: string;
 };
 
 export default function Result() {
@@ -27,7 +33,11 @@ export default function Result() {
         testResult.iv_levels === userData.iv_levels &&
         testResult.subjects_rel === userData.subjects_rel
       ) {
-        return { name: testResult.name, link: testResult.link };
+        return {
+          name: testResult.name,
+          link: testResult.link,
+          video: testResult.video,
+        };
       } else if (userData.nature === "nominal") {
         return { name: "Chi-Square Test" };
       }
@@ -62,6 +72,17 @@ export default function Result() {
           </Button>
         )}
       </CardHeader>
+      {result?.video && (
+        <CardContent className="w-full h-full flex justify-center">
+          <iframe
+            width="100%"
+            height="200px"
+            src={result?.video?.replace("watch?v=", "embed/")}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+          ></iframe>
+        </CardContent>
+      )}
       <CardFooter>
         <Button onClick={handleRestartClick}>Restart</Button>
       </CardFooter>

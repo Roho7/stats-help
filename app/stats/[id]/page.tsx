@@ -16,6 +16,7 @@ export interface TestDataType {
   iv_levels: number;
   subjects_rel: "between_subjects" | "within_subjects";
   link?: string;
+  video?: string;
 }
 
 const componentMap = {
@@ -32,7 +33,7 @@ export default function Page({ params }: { params: { id: string } }) {
 
   return (
     <RecoilRoot>
-      <div className="w-screen h-screen p-2 flex flex-col gap-8 justify-center items-center">
+      <div className="w-screen min- h-screen p-2 flex flex-col gap-8 justify-center items-center">
         {Component && <Component />}
       </div>
     </RecoilRoot>
