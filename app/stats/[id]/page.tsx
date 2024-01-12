@@ -5,7 +5,6 @@ import IVNumber from "./IVNumber";
 import NatureOfData from "./NatureOfData";
 import Parametric from "./Parametric";
 import Result from "./Result";
-import Selections from "./Selections";
 import Subjects from "./Subjects";
 import { RecoilRoot, atom } from "recoil";
 
@@ -16,19 +15,25 @@ export interface TestDataType {
   iv_number: number;
   iv_levels: number;
   subjects_rel: "between_subjects" | "within_subjects";
+  link?: string;
 }
 
+const componentMap = {
+  "1": NatureOfData,
+  "2": Parametric,
+  "3": IVNumber,
+  "4": IVLevels,
+  "5": Subjects,
+  "6": Result,
+};
+
 export default function Page({ params }: { params: { id: string } }) {
+  const Component = componentMap[params.id as keyof typeof componentMap];
+
   return (
     <RecoilRoot>
       <div className="w-screen h-screen p-2 flex flex-col gap-8 justify-center items-center">
-        {/* <Selections /> */}
-        {params.id === "1" && <NatureOfData />}
-        {params.id === "2" && <Parametric />}
-        {params.id === "3" && <IVNumber />}
-        {params.id === "4" && <IVLevels />}
-        {params.id === "5" && <Subjects />}
-        {params.id === "6" && <Result />}
+        {Component && <Component />}
       </div>
     </RecoilRoot>
   );

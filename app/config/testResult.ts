@@ -35,12 +35,13 @@ export const TestResults: TestDataType[] = [
   },
 
   {
-    name: "Friedman",
+    name: "Friedman Test",
     nature: "ordinal",
     param: "non_parametric",
     iv_number: 1,
     iv_levels: 3,
     subjects_rel: "within_subjects",
+    link: "/friedman",
   },
   {
     name: "Kruskal-Wallis",
@@ -92,7 +93,7 @@ export const TestResults: TestDataType[] = [
     subjects_rel: "within_subjects",
   },
   {
-    name: "Pearsons",
+    name: "Pearson's Correlation Coefficient",
     nature: "interval",
     param: "parametric",
     iv_number: 1,
@@ -100,7 +101,7 @@ export const TestResults: TestDataType[] = [
     subjects_rel: "within_subjects",
   },
   {
-    name: "Pearsons",
+    name: "Pearson's Correlation Coefficient",
     nature: "interval",
     param: "parametric",
     iv_number: 1,
@@ -108,7 +109,7 @@ export const TestResults: TestDataType[] = [
     subjects_rel: "between_subjects",
   },
   {
-    name: "Spearman",
+    name: "Spearman's Rank Correlation Coefficient",
     nature: "interval",
     param: "non_parametric",
     iv_number: 1,
@@ -116,7 +117,7 @@ export const TestResults: TestDataType[] = [
     subjects_rel: "within_subjects",
   },
   {
-    name: "Spearman",
+    name: "Spearman's Rank Correlation Coefficient",
     nature: "interval",
     param: "non_parametric",
     iv_number: 1,

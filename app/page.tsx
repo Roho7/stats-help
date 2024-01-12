@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import Link from "next/link";
 
 export default function Home() {
@@ -7,10 +8,12 @@ export default function Home() {
 
   return (
     <main className="w-screen min-h-screen flex flex-col items-center justify-center p-8 md:p-24 space-y-5">
-      <h1 className="text-xl">Know which test is right for you</h1>
-      <Button asChild>
-        <Link href="/stats/1">Begin</Link>
-      </Button>
+      <Card className="p-4 flex flex-col justify-center items-center gap-4">
+        <h1 className="text-xl">Know which test is right for you</h1>
+        <Button asChild>
+          <Link href="/stats/1">Begin</Link>
+        </Button>
+      </Card>
     </main>
   );
 }

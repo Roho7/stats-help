@@ -87,3 +87,15 @@ p {
   width: 1rem;
   height: 1rem;
 }
+
+tr {
+  @apply border-b border-border;
+}
+
+td {
+  @apply p-2 border-r border-border;
+}
+
+table {
+  @apply w-full border border-border;
+}

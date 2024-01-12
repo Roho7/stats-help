@@ -8,12 +8,17 @@ import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import { TestDataAtom } from "@/app/config/atoms";
 
+type ResultType = {
+  name: string;
+  link?: string;
+};
+
 export default function Result() {
   const router = useRouter();
   const testData = useRecoilValue(TestDataAtom);
-  const [result, setResult] = useState<string | null>("");
+  const [result, setResult] = useState<ResultType | null>(null);
 
-  const findMatchingTest = (userData: TestDataType): string | null => {
+  const findMatchingTest = (userData: TestDataType): ResultType | null => {
     for (const testResult of TestResults) {
       if (
         testResult.nature === userData.nature &&
@@ -22,12 +27,12 @@ export default function Result() {
         testResult.iv_levels === userData.iv_levels &&
         testResult.subjects_rel === userData.subjects_rel
       ) {
-        return testResult.name;
+        return { name: testResult.name, link: testResult.link };
       } else if (userData.nature === "nominal") {
-        return "Chi-Square Test";
+        return { name: "Chi-Square Test" };
       }
     }
-    return "Nothing found"; // No match found
+    return { name: "Nothing found" }; // No match found
   };
 
   useEffect(() => {
@@ -39,12 +44,23 @@ export default function Result() {
   };
 
   return (
-    <Card className="flex flex-col items-center">
+    <Card className="flex flex-col items-center text-center">
       <CardHeader>
         <Selections />
       </CardHeader>
       <CardHeader className="">
-        <h1>{result}</h1>
+        <h2>The correct test for your data is:</h2>
+        <h1>{result?.name}</h1>
+        {result?.link && (
+          <Button
+            variant="secondary"
+            onClick={() => {
+              router.push(`${result?.link}`);
+            }}
+          >
+            Perform Test
+          </Button>
+        )}
       </CardHeader>
       <CardFooter>
         <Button onClick={handleRestartClick}>Restart</Button>
