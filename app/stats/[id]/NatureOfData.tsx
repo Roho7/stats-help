@@ -17,7 +17,7 @@ import { useParams, useRouter } from "next/navigation";
 import { useRecoilState } from "recoil";
 import { TestDataType } from "./page";
 import { useState } from "react";
-import { TestDataAtom } from "@/app/config/atoms";
+import { TestDataAtom } from "@/app/_config/atoms";
 
 export default function NatureOfData() {
   const router = useRouter();
@@ -42,7 +42,7 @@ export default function NatureOfData() {
   };
 
   return (
-    <Card className="md:w-1/3">
+    <Card className="md:min-w-1/3">
       <CardHeader>
         <CardTitle>What type of data do you have?</CardTitle>
         <CardDescription>Think about the nature of your data.</CardDescription>

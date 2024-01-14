@@ -17,7 +17,7 @@ import { useRecoilState } from "recoil";
 import { TestDataType } from "./page";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { TestDataAtom } from "@/app/config/atoms";
+import { TestDataAtom } from "@/app/_config/atoms";
 
 export default function Subjects() {
   const router = useRouter();
@@ -41,7 +41,7 @@ export default function Subjects() {
     router.push(`/stats/${paramId - 1}`);
   };
   return (
-    <Card className=" md:w-1/3">
+    <Card className=" md:min-w-1/3">
       <CardHeader>
         <CardTitle>
           Are you comparing within subjects or between subjects?

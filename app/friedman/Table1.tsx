@@ -27,7 +27,7 @@ export default function Table1() {
             <th>Condition 2</th>
             <th>Condition 3</th>
           </tr>
-        </thead>
+        </thead>  
         <tbody>
           {friedmandata.map((row, index) => (
             <tr key={index}>

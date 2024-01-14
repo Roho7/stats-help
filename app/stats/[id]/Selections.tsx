@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import React from "react";
 import { useRecoilValue } from "recoil";
 import { Span } from "next/dist/trace";
-import { TestDataAtom } from "@/app/config/atoms";
+import { TestDataAtom } from "@/app/_config/atoms";
 
 export default function Selections() {
   const testValue = useRecoilValue(TestDataAtom);

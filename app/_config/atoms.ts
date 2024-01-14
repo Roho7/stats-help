@@ -14,3 +14,9 @@ export const TestDataAtom = atom({
   },
   effects_UNSTABLE: [persistAtom],
 });
+
+export const DarkModeAtom = atom({
+  key: "dark-mode",
+  default: false,
+  effects_UNSTABLE: [persistAtom],
+});

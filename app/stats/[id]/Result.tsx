@@ -7,11 +7,11 @@ import {
 import React, { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
 import { TestDataType } from "./page";
-import { TestResults } from "@/app/config/testResult";
+import { TestResults } from "@/app/_config/testResult";
 import Selections from "./Selections";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
-import { TestDataAtom } from "@/app/config/atoms";
+import { TestDataAtom } from "@/app/_config/atoms";
 
 type ResultType = {
   name: string;
