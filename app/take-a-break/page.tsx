@@ -21,7 +21,7 @@ function page() {
         </CardHeader>
         <CardContent>
           <Button asChild>
-            <Link href="/">I'd rather study</Link>
+            <Link href="/">I would rather study</Link>
           </Button>
         </CardContent>
       </Card>
