@@ -28,6 +28,9 @@ export default function Homepage() {
           <Button asChild>
             <Link href="/stats/1">Begin</Link>
           </Button>
+          <Button asChild>
+            <Link href="/take-a-break">I dont feel like studying</Link>
+          </Button>
         </Card>
       </main>
     </div>
