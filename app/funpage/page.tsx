@@ -7,6 +7,8 @@ import sun from "../../public/sun.png";
 import house from "../../public/house.png";
 import bg from "../../public/bg.png";
 import leaves from "../../public/leaves.png";
+import tree from "../../public/tree.png";
+import vines from "../../public/vines.png";
 import Image from "next/image";
 import { memo, useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -56,10 +58,27 @@ export default function Page() {
           return <div className={snow.snowflake} key={i}></div>;
         })}
       <motion.div
+        className="absolute -left-10 -top-10 z-50 w-100 blur-md"
+        animate={{
+          translateX: -mouseX / 120,
+          translateY: -mouseY / 70,
+        }}>
+        <Image src={vines} alt="bg" />
+      </motion.div>
+      <motion.div
+        className="absolute -left-[60vw] -top-[50vh] z-40 w-[90vw] blur-sm"
+        animate={{
+          translateX: mouseX / 80,
+          translateY: mouseY / 45,
+        }}>
+        <Image src={tree} alt="bg" />
+      </motion.div>
+      <motion.div
         className="absolute -left-30 -bottom-10 z-50 w-100 blur-md"
         animate={{
           translateX: -mouseX / 20,
           translateY: -mouseY / 70,
+          skewX: "0.2deg",
         }}>
         <Image src={leaves} alt="bg" />
       </motion.div>
@@ -68,11 +87,13 @@ export default function Page() {
         animate={{
           translateX: mouseX / 20,
           translateY: -mouseY / 70,
+          skewX: "0.2deg",
+          skewY: "0.2deg",
         }}>
         <Image src={leaves} alt="bg" className="scale-x-[-1]" />
       </motion.div>
       <motion.div
-        className="absolute -left-80 -bottom-32 z-[45] w-[100vw] blur-md"
+        className="absolute -left-80 -bottom-32 z-[45] w-[100vw] blur-[8px]"
         animate={{ translateX: mouseX / 100, translateY: mouseY / 70 }}>
         <Image src={mountainFore} alt="bg" />
       </motion.div>
@@ -82,12 +103,12 @@ export default function Page() {
         <Image src={house} alt="bg" />
       </motion.div>
       <motion.div
-        className="absolute right-0 bottom-0 z-30 w-[80vw]"
+        className="absolute right-0 bottom-0 z-30 w-[80vw] blur-[2px]"
         animate={{ translateX: mouseX / 100, translateY: mouseY / 60 }}>
         <Image src={mountainRight} alt="bg" />
       </motion.div>
       <motion.div
-        className="absolute -left-20 bottom-0 z-20"
+        className="absolute -left-20 bottom-0 z-20 blur-[4px]"
         animate={{ translateX: mouseX / 100, translateY: mouseY / 90 }}>
         <Image src={mountainLeft} alt="bg" />
       </motion.div>
