@@ -12,21 +12,12 @@ import { memo, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import snow from "./snow.module.scss";
 
-type Props = {};
-
-function Swatch({ color }: { color: { color: string } }) {
-  return (
-    <div className={"h-20 w-20 " + " bg-" + color.color + "-500"}>
-      {color.color}
-    </div>
-  );
-}
-
-export default function page({}: Props) {
+export default function Page() {
   const [mouseX, setMouseX] = useState(0);
   const [mouseY, setMouseY] = useState(0);
 
   (function () {
+    if (typeof window === "undefined") return;
     document.onmousemove = handleMouseMove;
     function handleMouseMove(event: any) {
       var eventDoc, doc, body;
